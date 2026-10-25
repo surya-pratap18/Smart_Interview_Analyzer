@@ -1,0 +1,36 @@
+# ── Web Framework ────────────────────────────────────────────────────────────
+flask==3.0.3
+flask-cors==4.0.1
+flask-socketio==5.3.6
+python-dotenv==1.0.1
+werkzeug==3.0.3
+gunicorn==22.0.0
+
+# ── Database ──────────────────────────────────────────────────────────────────
+psycopg2-binary==2.9.9          # PostgreSQL driver
+
+# ── Audio / Video Processing ──────────────────────────────────────────────────
+openai-whisper==20231117        # Speech-to-text (runs locally, no API key)
+pydub==0.25.1                   # Audio conversion
+moviepy==1.0.3                  # Video → audio extraction
+
+# ── Computer Vision ───────────────────────────────────────────────────────────
+mediapipe==0.10.14              # Face mesh, pose, hands — real-time
+deepface==0.0.93                # Emotion detection from face frames
+opencv-python==4.10.0.84        # Frame capture and processing
+
+# ── NLP / ML ──────────────────────────────────────────────────────────────────
+transformers==4.40.2            # HuggingFace — sentiment analysis
+torch==2.3.0                    # PyTorch backend for transformers
+spacy==3.7.4                    # NLP — keywords, sentence analysis
+scikit-learn==1.5.0             # Gesture classifier (RandomForest)
+numpy==1.26.4
+scipy==1.13.0
+
+# ── Translation ───────────────────────────────────────────────────────────────
+deep-translator==1.11.4         # Free Google Translate wrapper
+langdetect==1.0.9               # Detect spoken language
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+Pillow==10.3.0                  # Image processing for DeepFace
+requests==2.32.2

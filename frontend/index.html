@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>InterviewAI — Smart Interview Analyzer</title>
+    <meta name="description" content="AI-powered interview coach with real-time emotion detection, speech analysis, and personalized feedback"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600&display=swap" rel="stylesheet"/>
+    <style>
+      /* Prevent flash of unstyled content */
+      body { background: #070d1a; color: #e4ecf8; margin: 0; }
+
+      /* Scanline animation for camera HUD */
+      @keyframes scanline {
+        0%   { top: -4px; }
+        100% { top: 100%; }
+      }
+      @keyframes pulse {
+        0%,100% { opacity: 1; }
+        50%      { opacity: 0.3; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

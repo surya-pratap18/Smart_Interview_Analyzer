@@ -1,0 +1,9 @@
+backend/venv/
+backend/models/*.h5
+backend/models/*.pkl
+backend/uploads/
+frontend/node_modules/
+__pycache__/
+*.pyc
+backend/.env
+backend/.env.example

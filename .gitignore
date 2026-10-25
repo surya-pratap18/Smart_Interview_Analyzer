@@ -1,0 +1,6 @@
+.env
+.env.example
+backend/venv
+backend/uploads
+backend/models
+frontend/node_modules
