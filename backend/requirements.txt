@@ -38,3 +38,6 @@ requests==2.32.2
 # ── NLP / ML ─────────────────────────────────
 nltk
 textblob
+
+librosa
+soundfile
