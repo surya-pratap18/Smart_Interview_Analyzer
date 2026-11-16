@@ -10,7 +10,7 @@ gunicorn==22.0.0
 psycopg2-binary==2.9.9          # PostgreSQL driver
 
 # ── Audio / Video Processing ──────────────────────────────────────────────────
-openai-whisper==20231117        # Speech-to-text (runs locally, no API key)
+openai-whisper        # Speech-to-text (runs locally, no API key)
 pydub==0.25.1                   # Audio conversion
 moviepy==1.0.3                  # Video → audio extraction
 
