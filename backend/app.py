@@ -27,8 +27,12 @@ load_dotenv()    # Load .env file variables
 # ── App factory ───────────────────────────────────────────────────────────────
 
 def create_app():
+    print("STARTUP: Creating Flask app", flush=True)
+
     app = Flask(__name__)
 
+    print("STARTUP: Flask app created", flush=True)
+    
     # Secret key for sessions
     app.config["SECRET_KEY"] = os.getenv("SECRET_KEY", "dev-secret-change-in-production")
 
@@ -53,6 +57,8 @@ def create_app():
         }
     })
 
+    print("STARTUP: Importing routes", flush=True)
+    
     # ── Register Blueprints ───────────────────────────────────────────────────
     from routes.analyze  import analyze_bp
     from routes.history  import history_bp
@@ -61,6 +67,7 @@ def create_app():
     app.register_blueprint(analyze_bp,   url_prefix="/api")
     app.register_blueprint(history_bp,   url_prefix="/api")
     app.register_blueprint(translate_bp, url_prefix="/api")
+
 
     # ── Health check ──────────────────────────────────────────────────────────
     @app.route("/api/health")
@@ -88,6 +95,8 @@ def create_app():
     return app
 
 
+print("STARTUP: Routes imported", flush=True)
+
 # ── Create app + SocketIO ─────────────────────────────────────────────────────
 
 app = create_app()
@@ -103,11 +112,14 @@ socketio = SocketIO(
 from routes.realtime import register_socketio
 register_socketio(socketio)
 
+print("STARTUP: Routes imported", flush=True)
+
 # ── Initialize database ───────────────────────────────────────────────────────
 from services.database import init_db
 with app.app_context():
     init_db()
 
+print("STARTUP: Database initialized", flush=True)
 
 # ── Run ───────────────────────────────────────────────────────────────────────
 
