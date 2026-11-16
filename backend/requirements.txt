@@ -34,3 +34,7 @@ langdetect==1.0.9               # Detect spoken language
 # ── Utilities ─────────────────────────────────────────────────────────────────
 Pillow==10.3.0                  # Image processing for DeepFace
 requests==2.32.2
+
+# ── NLP / ML ─────────────────────────────────
+nltk
+textblob
